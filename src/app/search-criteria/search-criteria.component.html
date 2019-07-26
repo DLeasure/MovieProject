@@ -11,7 +11,7 @@ Rating:
 </select>
 
 Genre:
-<select name="genre">
+<select name="genre" [(ngModel)]="genre">
   <option value="action">Action</option>
   <option value="adventure">Adventure</option>
   <option value="animation">Animation</option>
@@ -41,3 +41,8 @@ Length:
   <option value="twoHours"></option>
   <option value="overHour"></option>
 </select>
+
+<input type="text" value="genre" placeholder="genre" [(ngModel)]="genre" />{{genre}}
+<button type="submit" (click)="returnMovie(genre)">Submit</button>
+<p>search-criteria works!</p>
+
