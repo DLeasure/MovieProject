@@ -1,3 +1,48 @@
+<p>search-criteria works!</p>
+
+<input type="text">
+Rating:
+<select name="rating">
+  <option value="poor">0-59</option>
+  <option value="fair">60-69</option>
+  <option value="good">70-79</option>
+  <option value="veryGood">80-89</option>
+  <option value="excellent">90-100</option>
+</select>
+
+Genre:
+<select name="genre" [(ngModel)]="genre">
+  <option value="action">Action</option>
+  <option value="adventure">Adventure</option>
+  <option value="animation">Animation</option>
+  <option value="comedy">Comedy</option>
+  <option value="crime">Crime</option>
+  <option value="documentary">Documentary</option>
+  <option value="drama">Drama</option>
+  <option value="family">Family</option>
+  <option value="fantasy">Fantasy</option>
+  <option value="history">History</option>
+  <option value="horror">Horror</option>
+  <option value="music">Music</option>
+  <option value="mystery">Mystery</option>
+  <option value="romance">Romance</option>
+  <option value="scienceFiction">Science Fiction</option>
+  <option value="tvMovie">TV Movie</option>
+  <option value="thriller">Thriller</option>
+  <option value="war">War</option>
+  <option value="western">Western</option>
+</select>
+
+Length:
+<select name="length">
+  <option value="ltHour"></option>
+  <option value="hour"></option>
+  <option value="hourHalf"></option>
+  <option value="twoHours"></option>
+  <option value="overHour"></option>
+</select>
+
 <input type="text" value="genre" placeholder="genre" [(ngModel)]="genre" />{{genre}}
 <button type="submit" (click)="returnMovie(genre)">Submit</button>
 <p>search-criteria works!</p>
+
