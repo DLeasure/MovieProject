@@ -10,6 +10,8 @@ import { MovieCallService } from '../movie-call.service';
 export class SearchCriteriaComponent implements OnInit {
 
   genre : any;
+  rating: any;
+  length: any;
 
   constructor(private movieCallService : MovieCallService) { }
 
@@ -55,10 +57,39 @@ export class SearchCriteriaComponent implements OnInit {
     }
   }
 
+  getRating(rating){
+    if(rating === "poor"){
+      return 59;
+    } else if(rating === "fair"){
+      return 69;
+    } else if(rating === "good"){
+      return 79;
+    } else if (rating === "veryGood"){
+      return 89;
+    } else if (rating === "excellent"){
+      return 100;
+    }
+  }
 
-  returnMovie(genre){
-    this.movieCallService.getMovie(this.getGenre(genre)).subscribe((e : any) => {
+  getLength(length){
+    if(length === "ltHour"){
+      return 50;
+    } else if (length === "hour"){
+      return 60;
+    } else if (length === "hourHalf"){
+      return 90;
+    } else if (length === "twoHours"){
+      return 120;
+    } else if (length === "overHour"){
+      return 150;
+    }
+  }
+
+
+  returnMovie(){
+    this.movieCallService.getMovie(this.getGenre(this.genre), this.getRating(this.rating), this.getLength(this.length)).subscribe((e : any) => {
       console.log(e);
+      console.log(this.getRating(this.rating));
     })
   }
 
