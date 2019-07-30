@@ -104,7 +104,7 @@ export class SearchCriteriaComponent implements OnInit {
   }
 
   returnMovie(){
-    this.movieCallService.getMovie(this.getGenre(this.genre), this.getRating(this.rating), this.getLength(this.length)).subscribe((e : any) => {
+    this.movieCallService.getMovie(this.getGenre(this.genre), this.getRating(this.rating), this.getLengthGte(this.length), this.getLengthLte(this.length)).subscribe((e : any) => {
       this.movieData.emit(e.results);
       console.log(e.results)
       console.log(this.getRating(this.rating));
