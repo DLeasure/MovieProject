@@ -1,11 +1,17 @@
-<input type="text"> Rating:
+<div class="search">
+
+Title: <input type="text" placeholder="Title">
+<div></div>
+Rating:
 <select name="rating" [(ngModel)]="rating">
-  <option value="poor">0-59</option>
-  <option value="fair">60-69</option>
-  <option value="good">70-79</option>
-  <option value="veryGood">80-89</option>
-  <option value="excellent">90-100</option>
-</select> Genre:
+  <option value="poor">Poor</option>
+  <option value="fair">Fair</option>
+  <option value="good">Good</option>
+  <option value="veryGood">Very Good</option>
+  <option value="excellent">Excellent</option>
+</select> 
+<div></div>
+Genre:
 <select name="genre" [(ngModel)]="genre">
   <option value="action">Action</option>
   <option value="adventure">Adventure</option>
@@ -22,17 +28,29 @@
   <option value="mystery">Mystery</option>
   <option value="romance">Romance</option>
   <option value="science fiction">Science Fiction</option>
-  <option value="tvMovie">TV Movie</option>
+  <option value="tv movie">TV Movie</option>
   <option value="thriller">Thriller</option>
   <option value="war">War</option>
   <option value="western">Western</option>
 </select> Length:
 <select name="length" [(ngModel)]="length">
-  <option value="ltHour">50</option>
-  <option value="hour">60</option>
-  <option value="hourHalf">90</option>
-  <option value="twoHours">120</option>
-  <option value="overHour">150</option>
+  <option value="ltHour">Under an Hour</option>
+  <option value="hour">One Hour</option>
+  <option value="hourHalf">Hour and a Half</option>
+  <option value="twoHours">Two Hours</option>
+  <option value="overHour">Over Two Hours</option>
 </select>
 
-<button type="submit" (click)="returnMovie(genre)">Submit</button>
+<div></div>
+Length:
+<select name="length">
+  <option value="ltHour"></option>
+  <option value="hour"></option>
+  <option value="hourHalf"></option>
+  <option value="twoHours"></option>
+  <option value="overHour"></option>
+</select>
+
+<button type="submit" (click)="returnMovie(genre)" routerLink="movieList">Submit</button>
+
+</div>

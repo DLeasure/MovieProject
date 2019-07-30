@@ -1,0 +1,36 @@
+.page {
+    background-image: url("Netflix-Background.jpg");
+    height: 2000px;
+    width: 100%;
+}
+
+.search-bar {
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.search {
+    font-size: 50px;
+    font-style: italic;
+    padding-left: 10px;
+    color: white;
+    justify-content: space-between;
+}
+
+.movie {
+    font-size: 50px;
+    font-style: italic;
+    padding-left: 10px;
+    color: white;
+}
+
+.watch {
+    font-size: 50px;
+    font-style: italic;
+    padding-left: 10px;
+    color: white;
+} 

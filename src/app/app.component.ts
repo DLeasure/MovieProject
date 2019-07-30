@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { MovieCallService } from './movie-call.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 export interface Movie {
   id: number,
@@ -18,9 +19,9 @@ export interface Movie {
 export class AppComponent {
   title = 'MovieProject';
 
-  constructor(private movieCallService : MovieCallService) {
-    const results = JSON.parse(localStorage.getItem("movieListResult"));
-  }
+  constructor(
+    private router: Router,
+  ) {}
 
   watchList: Movie[] = [{
     "id": 301528,
@@ -34,4 +35,14 @@ export class AppComponent {
     ],
     "release_date": "2019-06-19"
   }];
+
+  addMovieToWatchList(newMovie : Movie) {
+    this.watchList.push(newMovie);
+    return;
+  }
+
+  goToWatchList(watchList : Movie[]) {
+    this.router.navigate(['/watchList', { list : watchList }])
+    console.log("function ran");
+  }
 }
