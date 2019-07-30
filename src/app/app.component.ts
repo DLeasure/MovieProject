@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 interface Movie {
   id: number,
@@ -17,6 +18,10 @@ interface Movie {
 export class AppComponent {
   title = 'MovieProject';
 
+  constructor(
+    private router: Router,
+  ) {}
+
   watchList: Movie[] = [{
     "id": 301528,
     "title": "Toy Story 4",
@@ -29,4 +34,14 @@ export class AppComponent {
     ],
     "release_date": "2019-06-19"
   }];
+
+  addMovieToWatchList(newMovie : Movie) {
+    this.watchList.push(newMovie);
+    return;
+  }
+
+  goToWatchList(watchList : Movie[]) {
+    this.router.navigate(['/watchList', { list : watchList }])
+    console.log("function ran");
+  }
 }
