@@ -1,5 +1,8 @@
-<div><a routerLink="searchCriteria">Search Criteria</a></div>
-<div><a routerLink="movieList">Movie List</a></div>
-<div><button (click)="goToWatchList()">Watch List</button></div>
+<div class="page">
+<div class="search-bar">
+<div><a class="search" routerLink="searchCriteria">Search</a></div>
+<div><a class="movie" routerLink="movieList">Movie List</a></div>
+<div><button class="watch" (click)="goToWatchList()">Watch List</button></div>
 
 <router-outlet></router-outlet>
+

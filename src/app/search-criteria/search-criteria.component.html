@@ -1,11 +1,17 @@
-<input type="text"> Rating:
+<div class="search">
+
+Title: <input type="text" placeholder="Title">
+<div></div>
+Rating:
 <select name="rating" [(ngModel)]="rating">
   <option value="poor">Poor</option>
   <option value="fair">Fair</option>
   <option value="good">Good</option>
   <option value="veryGood">Very Good</option>
   <option value="excellent">Excellent</option>
-</select> Genre:
+</select> 
+<div></div>
+Genre:
 <select name="genre" [(ngModel)]="genre">
   <option value="action">Action</option>
   <option value="adventure">Adventure</option>
@@ -35,5 +41,17 @@
   <option value="overHour">Over Two Hours</option>
 </select>
 
-<button type="submit" (click)="returnMovie(genre)">Submit</button>
-<p>search-criteria works!</p>
+<div></div>
+Length:
+<select name="length">
+  <option value="ltHour"></option>
+  <option value="hour"></option>
+  <option value="hourHalf"></option>
+  <option value="twoHours"></option>
+  <option value="overHour"></option>
+</select>
+
+
+<button type="submit" (click)="returnMovie(genre)" routerLink="movieList">Submit</button>
+
+</div>
