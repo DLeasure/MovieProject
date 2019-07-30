@@ -3,13 +3,13 @@
 Title: <input type="text" placeholder="Title">
 <div></div>
 Rating:
-<select name="rating">
-  <option value="poor">0-59</option>
-  <option value="fair">60-69</option>
-  <option value="good">70-79</option>
-  <option value="veryGood">80-89</option>
-  <option value="excellent">90-100</option>
-</select>
+<select name="rating" [(ngModel)]="rating">
+  <option value="poor">Poor</option>
+  <option value="fair">Fair</option>
+  <option value="good">Good</option>
+  <option value="veryGood">Very Good</option>
+  <option value="excellent">Excellent</option>
+</select> 
 <div></div>
 Genre:
 <select name="genre" [(ngModel)]="genre">
@@ -27,12 +27,20 @@ Genre:
   <option value="music">Music</option>
   <option value="mystery">Mystery</option>
   <option value="romance">Romance</option>
-  <option value="scienceFiction">Science Fiction</option>
-  <option value="tvMovie">TV Movie</option>
+  <option value="science fiction">Science Fiction</option>
+  <option value="tv movie">TV Movie</option>
   <option value="thriller">Thriller</option>
   <option value="war">War</option>
   <option value="western">Western</option>
+</select> Length:
+<select name="length" [(ngModel)]="length">
+  <option value="ltHour">Under an Hour</option>
+  <option value="hour">One Hour</option>
+  <option value="hourHalf">Hour and a Half</option>
+  <option value="twoHours">Two Hours</option>
+  <option value="overHour">Over Two Hours</option>
 </select>
+
 <div></div>
 Length:
 <select name="length">

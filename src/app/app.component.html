@@ -2,7 +2,7 @@
 <div class="search-bar">
 <div><a class="search" routerLink="searchCriteria">Search</a></div>
 <div><a class="movie" routerLink="movieList">Movie List</a></div>
-<div><a class="watch" routerLink="watchList">Watch List</a></div>
-</div>
+<div><button class="watch" (click)="goToWatchList()">Watch List</button></div>
+
 <router-outlet></router-outlet>
-<div>
+
