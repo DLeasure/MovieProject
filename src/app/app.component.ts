@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
+import { MovieCallService } from './movie-call.service';
 
-interface Movie {
+export interface Movie {
   id: number,
   title: string,
   poster_path: string,
@@ -16,6 +17,10 @@ interface Movie {
 
 export class AppComponent {
   title = 'MovieProject';
+
+  constructor(private movieCallService : MovieCallService) {
+    const results = JSON.parse(localStorage.getItem("movieListResult"));
+  }
 
   watchList: Movie[] = [{
     "id": 301528,

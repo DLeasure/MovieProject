@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MovieCallService } from '../movie-call.service';
+import {  Movie } from '../app.component';
 
 
 @Component({
@@ -8,6 +9,9 @@ import { MovieCallService } from '../movie-call.service';
   styleUrls: ['./search-criteria.component.css']
 })
 export class SearchCriteriaComponent implements OnInit {
+
+  @Input() movie: Movie;
+  @Output() movieData : EventEmitter<Movie[]> = new EventEmitter<Movie[]>();
 
   genre : any;
   rating: any;
@@ -85,12 +89,14 @@ export class SearchCriteriaComponent implements OnInit {
     }
   }
 
+  
 
   returnMovie(){
     this.movieCallService.getMovie(this.getGenre(this.genre), this.getRating(this.rating), this.getLength(this.length)).subscribe((e : any) => {
-      console.log(e);
+      this.movieData.emit(e.results);
+      console.log(e.results)
       console.log(this.getRating(this.rating));
-    })
+    });
   }
 
   ngOnInit() {

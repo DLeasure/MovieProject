@@ -8,9 +8,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 
 const routes: Routes = [{
-  path: 'app', component: AppComponent
-}, {
-  path: 'searchCriteria', component: SearchCriteriaComponent
+  path: '', component: MovieListComponent
 }, {
   path: 'movieList', component: MovieListComponent
 }, {
