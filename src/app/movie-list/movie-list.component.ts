@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Movie} from '../app.component';
+import { MovieCallService} from '../movie-call.service';
+
+interface MovieData {
+  results : []; 
+}
 
 @Component({
   selector: 'app-movie-list',
@@ -7,9 +13,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MovieListComponent implements OnInit {
 
-  constructor() { }
+@Input() result: Movie;
+
+  constructor(private movieCallService : MovieCallService) { 
+    console.log("constructor");
+  }  
 
   ngOnInit() {
+
   }
 
+  results : [];
+
+  movieResults(movieList){
+    this.results = movieList;
+  }
 }

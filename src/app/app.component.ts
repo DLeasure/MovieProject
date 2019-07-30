@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+import { MovieCallService } from './movie-call.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-interface Movie {
+export interface Movie {
   id: number,
   title: string,
   poster_path: string,
