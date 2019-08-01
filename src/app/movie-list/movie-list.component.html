@@ -1,14 +1,17 @@
 <app-search-criteria (movieData)="movieResults($event)">
 </app-search-criteria>
 <div>
-    <div *ngFor="let result of results" class="tBox">
-        <div class="balls">
-            <h2 class="title">{{result.title}}</h2>
-            <p class="rate">Rating: {{result.vote_average}}</p>
-            <p class="about">{{result.overview}}</p>
-            <button type="submit" (click)="addToList(result)">Add Movie</button>
-        </div>
+  <div *ngFor="let result of results" class="tBox">
+    <div class="all">
+      <div class="pic">
         <p><img class="image" src="https://image.tmdb.org/t/p/w500{{result.poster_path}}"></p>
-
+      </div>
+      <div class="words">
+        <h2 class="title">{{result.title}}</h2>
+        <p class="rate">Rating: {{result.vote_average}}</p>
+        <p class="about">{{result.overview}}</p>
+        <button type="submit" (click)="addToList(result)">Add Movie</button>
+      </div>
     </div>
+  </div>
 </div>
