@@ -1,13 +1,13 @@
-<p>movie-list works!</p>
 
 <app-search-criteria (movieData)="movieResults($event)"></app-search-criteria>
-
 <div>
-    <div *ngFor="let result of results">
-        <img src="https://image.tmdb.org/t/p/w500{{result.poster_path}}">
-        <h2>{{result.title}}</h2>
-        <p>Rating: {{result.vote_average}}</p>
-        <p>{{result.overview}}</p>
+  <div *ngFor="let result of results" class="tBox">
+    <div class="balls">
+        <h2 class="title">{{result.title}}</h2>
+        <p class="rate">Rating: {{result.vote_average}}</p>
+        <p class="about">{{result.overview}}</p>
+    </div>
+    <p><img class="image" src="https://image.tmdb.org/t/p/w500{{result.poster_path}}"></p>
         <button type="submit" (click)="addToList(result)">Add Movie</button>
     </div>
 </div>

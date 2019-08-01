@@ -1,3 +1,5 @@
 .search {
-    background: white;
+    background: red;
+    display: flex;
+    flex-direction: row;
 }
