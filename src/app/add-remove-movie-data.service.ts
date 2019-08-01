@@ -10,18 +10,7 @@ export class AddRemoveMovieDataService {
 
   constructor() { }
 
-  watchList: Movie[] = [{
-    "id": 301528,
-    "title": "Toy Story 4",
-    "poster_path": "/w9kR8qbmQ01HwnvK4alvnQ2ca0L.jpg",
-    "genre_ids": [
-      12,
-      16,
-      35,
-      10751
-    ],
-    "release_date": "2019-06-19"
-  }];
+  watchList: Movie[] = [];
 
   results : Movie[];
 
