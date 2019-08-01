@@ -22,3 +22,8 @@
     width: 150px;
     height: 250px;
 }
+
+button {
+    background-color: darkred;
+    color: white;
+}
