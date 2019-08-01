@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Movie} from '../app.component';
+import { Component, OnInit, Input } from '@angular/core';
+import { AddRemoveMovieDataService } from '../add-remove-movie-data.service';
 import { MovieCallService} from '../movie-call.service';
 
 interface MovieData {
@@ -13,19 +13,20 @@ interface MovieData {
 })
 export class MovieListComponent implements OnInit {
 
-@Input() result: Movie;
 
-  constructor(private movieCallService : MovieCallService) { 
+
+  constructor(private movieCallService : MovieCallService, private addRemoveMovieDataService : AddRemoveMovieDataService) { 
     console.log("constructor");
   }  
 
-  ngOnInit() {
-
-  }
+  ngOnInit() {}
 
   results : [];
-
   movieResults(movieList){
     this.results = movieList;
+  }
+
+  addToList(result){
+    this.addRemoveMovieDataService.addMovieToWatchList(result);
   }
 }

@@ -3,10 +3,11 @@
 <app-search-criteria (movieData)="movieResults($event)"></app-search-criteria>
 
 <div>
-  <div *ngFor="let result of results">
-    <img src="https://image.tmdb.org/t/p/w500{{result.poster_path}}">
-    <h2>{{result.title}}</h2>
-    <p>Rating: {{result.vote_average}}</p>
-    <p>{{result.overview}}</p>
-  </div>
+    <div *ngFor="let result of results">
+        <img src="https://image.tmdb.org/t/p/w500{{result.poster_path}}">
+        <h2>{{result.title}}</h2>
+        <p>Rating: {{result.vote_average}}</p>
+        <p>{{result.overview}}</p>
+        <button type="submit" (click)="addToList(result)">Add Movie</button>
+    </div>
 </div>
