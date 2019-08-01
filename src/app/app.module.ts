@@ -10,6 +10,8 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 import { MovieListComponent } from './movie-list/movie-list.component';
 import { WatchListPageComponent } from './watch-list-page/watch-list-page.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AddRemoveMovieDataService } from './add-remove-movie-data.service';
+
 
 
 @NgModule({
@@ -26,7 +28,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     HttpClientModule,
     FormsModule,
   ],
-  providers: [MovieCallService],
+  providers: [MovieCallService, AddRemoveMovieDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

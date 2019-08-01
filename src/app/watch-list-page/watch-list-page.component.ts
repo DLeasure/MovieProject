@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { AddRemoveMovieDataService } from '../add-remove-movie-data.service';
+
 
 @Component({
   selector: 'app-watch-list-page',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WatchListPageComponent implements OnInit {
 
-  constructor() { }
+  private addedMovie;
+  constructor(private addRemoveMovieDataService : AddRemoveMovieDataService) { }
 
   ngOnInit() {
+    this.addedMovie = this.addRemoveMovieDataService.watchList;
   }
 
 }
