@@ -35,10 +35,11 @@ export class AddRemoveMovieDataService {
     return;
   }
 
-  removeMovieFromWatchList(e){
-    e = e.target;
-    this.watchList.splice(e, 1);
-    console.log(e);
+  removeMovieFromWatchList(i){
+    // let i = this.results.findIndex(result);
+    console.log(i);
+    this.watchList.splice(i, 1);
+    
   }
 
 }
