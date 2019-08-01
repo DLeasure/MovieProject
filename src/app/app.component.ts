@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieCallService } from './movie-call.service';
+import { AddRemoveMovieDataService } from './add-remove-movie-data.service';
+
 
 @Component({
   selector: 'app-root',
@@ -10,11 +12,7 @@ export class AppComponent {
   title = 'MovieProject';
   _data: any;
 
-  constructor(
-    private _requestService: MovieCallService
-  ) { }
 
-  ngOnInit() {
-    this._data = [];
-  }
+  constructor(private movieCallService : MovieCallService, private addRemoveMovieDataService : AddRemoveMovieDataService) {}
+
 }
