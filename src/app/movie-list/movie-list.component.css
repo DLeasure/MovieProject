@@ -1,0 +1,17 @@
+.image {
+    width: 150px;
+    height: 250px;
+    z-index: 1000;
+    margin-top: -140px;
+}
+
+.balls {
+    padding-left: 200px;
+    z-index: -30;
+}
+.tBox {
+    width: 95%;
+    height: 250px;
+    background-color: white;
+    margin: 20px;
+}

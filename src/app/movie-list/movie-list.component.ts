@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Movie} from '../app.component';
+import { Movie } from '../app.component';
 import { MovieCallService} from '../movie-call.service';
 
 interface MovieData {

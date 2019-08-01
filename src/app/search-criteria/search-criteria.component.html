@@ -1,7 +1,6 @@
 <div class="search">
 
-Title: <input type="text" placeholder="Title">
-<div></div>
+
 Rating:
 <select name="rating" [(ngModel)]="rating">
   <option value="poor">Poor</option>
@@ -41,16 +40,7 @@ Genre:
   <option value="overHour">Over Two Hours</option>
 </select>
 
-<div></div>
-Length:
-<select name="length">
-  <option value="ltHour"></option>
-  <option value="hour"></option>
-  <option value="hourHalf"></option>
-  <option value="twoHours"></option>
-  <option value="overHour"></option>
-</select>
 
-<button type="submit" (click)="returnMovie(genre)">Submit</button>
+<button type="submit" (click)="returnMovie(genre)" >Submit</button>
 
 </div>
