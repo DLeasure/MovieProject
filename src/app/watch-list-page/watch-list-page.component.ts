@@ -16,4 +16,8 @@ export class WatchListPageComponent implements OnInit {
     this.addedMovie = this.addRemoveMovieDataService.watchList;
   }
 
+  removeMovie(result){
+    this.addRemoveMovieDataService.removeMovieFromWatchList(result);
+  }
+
 }

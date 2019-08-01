@@ -35,5 +35,10 @@ export class AddRemoveMovieDataService {
     return;
   }
 
+  removeMovieFromWatchList(e){
+    e = e.target;
+    this.watchList.splice(e, 1);
+    console.log(e);
+  }
 
 }
