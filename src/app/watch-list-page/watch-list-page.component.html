@@ -1,6 +1,11 @@
-
 <p>watch-list-page works!</p>
 
-<!-- <div *ngFor="let addedMovie of addedMovie">
-    <p>{{addedMovie.title}}</p>
-</div> -->
+<div *ngFor="let result of addedMovie">
+    <div class="balls">
+        <h2 class="title">{{result.title}}</h2>
+        <p class="rate">Rating: {{result.vote_average}}</p>
+        <p class="about">{{result.overview}}</p>
+        <button type="submit" (click)="removeMovie(result)">Remove</button>
+    </div>
+    <p><img class="image" src="https://image.tmdb.org/t/p/w500{{result.poster_path}}"></p>
+</div>
